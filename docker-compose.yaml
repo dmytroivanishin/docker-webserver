@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  nginx:
+    build: ./client
+    volumes:
+      - ./docker/nginx/:/etc/nginx/conf.d/
+      - ./client/:/usr/share/nginx/html
+    ports:
+      - 8000:80
+    networks:
+      - web
+      - backend
+  server:
+    build: ./server
+    ports:
+      - 5000:5000
+    networks:
+      - backend
+  mongodb:
+    image: mongo
+    volumes:
+      - db:/data/db
+    ports:
+      - 27017:27017
+    networks:
+      - backend
+
+volumes:
+  db:
+
+networks:
+  web:
+  backend:

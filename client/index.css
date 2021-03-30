@@ -1,0 +1,45 @@
+*{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body{
+  font: normal normal 16px / 1.2 "Roboto", sans-serif;
+}
+
+h1{
+  font-family: "Roboto";
+  font-size: 2rem;
+}
+
+.container{
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.main{
+  margin: -15px;
+}
+
+.articles{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article-item{
+  flex: 0 0 25%;
+  padding: 15px;
+}
