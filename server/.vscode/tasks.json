@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run-docker-compose-up",
+      		"type": "docker-compose",
+			"dockerCompose": {
+				"up": {
+					"detached": true,
+					"build": true,
+					"services": ["all"]
+				},
+				"files": [
+					"../${workspaceFolder}/docker-compose.yaml",
+				],
+				"platform": "node"
+			},
+		}
+		/*{
+			"type": "bash",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "npm: start",
+			"detail": "node ./index.js",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}*/
+	]
+}

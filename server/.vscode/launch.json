@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Docker: Attach to Node",
+            "address": "localhost",
+            "port": 5000,
+            "protocol": "inspector",
+            "restart": true,
+            "smartStep": true,
+            "sourceMaps": true,
+            "remoteRoot": "/app",
+            "localRoot": "${workspaceFolder}",
+            "trace": true
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach to Process !!!!!",
+            "port": 5000
+        },
+        {
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}",
+            "name": "Attach to Remote",
+            "remoteRoot": "/app",
+            "request": "attach",
+            "port": 5000,
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node",
+        },
+        /*{
+            "name": "Launch Node.js in Docker",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "Run Docker Container",
+            "platform": "node"
+        },
+        {
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}",
+            "name": "Attach to Remote",
+            "remoteRoot": "/app",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "docker",
+            "platform": "node"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/server/index.js"
+        }*/
+    ]
+}
